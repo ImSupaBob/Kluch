@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d1iguuuk2pkjs"]
+
+[ext_resource type="Script" path="res://Script/LogicCell/logic_cell.gd" id="1_n633i"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_ecry0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0j1a"]
+size = Vector2(32, 32)
+
+[node name="LogicCell" type="StaticBody2D" groups=["logic_cells"]]
+position = Vector2(16, 16)
+collision_layer = 2
+script = ExtResource("1_n633i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(32, 32)
+texture = SubResource("CanvasTexture_ecry0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_m0j1a")

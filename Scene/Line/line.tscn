@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://10vqq2raaua0"]
+
+[ext_resource type="PackedScene" uid="uid://cvvsucnoy2fqx" path="res://Scene/Key/key.tscn" id="1_jsjuk"]
+[ext_resource type="Script" path="res://Script/Line/line.gd" id="1_q0owo"]
+
+[node name="Line" type="Panel" groups=["Lines"]]
+size_flags_horizontal = 6
+size_flags_vertical = 4
+mouse_filter = 1
+script = ExtResource("1_q0owo")
+
+[node name="Key" parent="." instance=ExtResource("1_jsjuk")]
+visible = false
+position = Vector2(-24, 16)

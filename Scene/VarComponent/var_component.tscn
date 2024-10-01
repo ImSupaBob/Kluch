@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0xpwb6rww6k2"]
+
+[ext_resource type="Script" path="res://Script/Varcomponent/var_component.gd" id="1_83q6q"]
+
+[node name="VarComponent" type="Label"]
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+script = ExtResource("1_83q6q")

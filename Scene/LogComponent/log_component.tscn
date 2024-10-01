@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://b22udbmln3jy0"]
+
+[ext_resource type="Script" path="res://Script/LogComponent/log_component.gd" id="1_fgoil"]
+[ext_resource type="Texture2D" uid="uid://bjosrvw22flo" path="res://Assets/1726594190387.png" id="2_3iw1d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xn5t5"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55djv"]
+size = Vector2(32, 32)
+
+[node name="LogComponent" type="StaticBody2D"]
+z_index = 2
+collision_mask = 0
+input_pickable = true
+script = ExtResource("1_fgoil")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.0300188, 0.0313726)
+texture = ExtResource("2_3iw1d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xn5t5")
+debug_color = Color(0.976471, 0.117647, 0.270588, 0.419608)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_55djv")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

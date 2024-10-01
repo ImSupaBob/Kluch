@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://dsiso6kc7vjnm"]
+
+[ext_resource type="Script" path="res://Script/Levels/Level1/level_1.gd" id="1_5forh"]
+[ext_resource type="PackedScene" uid="uid://b32unvkphkkun" path="res://Scene/Levels/BaseLevelScene/base_level_scene.tscn" id="1_maocd"]
+[ext_resource type="PackedScene" uid="uid://dfd81mhgyocle" path="res://Scene/Line/Pass/pass.tscn" id="3_3hxcu"]
+[ext_resource type="PackedScene" uid="uid://10vqq2raaua0" path="res://Scene/Line/line.tscn" id="4_v0pm2"]
+[ext_resource type="PackedScene" uid="uid://d1iguuuk2pkjs" path="res://Scene/LogicCell/logic_cell.tscn" id="5_6ncel"]
+[ext_resource type="PackedScene" uid="uid://dyvw3k8vqqa5f" path="res://Scene/Line/Win/win.tscn" id="6_1hvs6"]
+[ext_resource type="PackedScene" uid="uid://b6r81l7l4h04v" path="res://Scene/LogComponent/Components/down.tscn" id="7_tluc8"]
+
+[node name="Level1" instance=ExtResource("1_maocd")]
+script = ExtResource("1_5forh")
+
+[node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("3_3hxcu")]
+layout_mode = 2
+text_line = "creat Adam"
+
+[node name="Line1_2" parent="LinesContainer" index="1" instance=ExtResource("3_3hxcu")]
+layout_mode = 2
+text_line = "run dota_2.exe"
+
+[node name="Line1_3" parent="LinesContainer" index="2" instance=ExtResource("4_v0pm2")]
+layout_mode = 2
+command = "logic_cell"
+
+[node name="LogicCell" parent="LinesContainer/Line1_3" index="1" instance=ExtResource("5_6ncel")]
+
+[node name="Line1_4" parent="LinesContainer" index="3" instance=ExtResource("3_3hxcu")]
+layout_mode = 2
+text_line = "bruh.pepega()"
+
+[node name="Line1_5" parent="LinesContainer" index="4" instance=ExtResource("6_1hvs6")]
+layout_mode = 2
+text_line = "win"
+
+[node name="Down" parent="." index="4" instance=ExtResource("7_tluc8")]
+position = Vector2(520, 96)
+
+[editable path="LinesContainer"]

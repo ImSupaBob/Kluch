@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bvu87bccq11ir"]
+
+[node name="LinesContainer" type="GridContainer"]
+offset_bottom = 368.0
+size_flags_horizontal = 0
+theme_override_constants/v_separation = 32

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://b32unvkphkkun"]
+
+[ext_resource type="Script" path="res://Script/game/game.gd" id="1_kyshq"]
+[ext_resource type="PackedScene" uid="uid://bvu87bccq11ir" path="res://Scene/LinesContainer/lines_container.tscn" id="2_5gdyd"]
+
+[node name="BaseLevelScene" type="Node2D"]
+script = ExtResource("1_kyshq")
+
+[node name="Managers" type="Node" parent="."]
+
+[node name="LinesContainer" parent="." instance=ExtResource("2_5gdyd")]
+offset_left = 128.0
+offset_top = 80.0
+offset_right = 128.0
+offset_bottom = 528.0
+
+[node name="LinesContainer2" parent="." instance=ExtResource("2_5gdyd")]
+offset_left = 384.0
+offset_top = 80.0
+offset_right = 384.0
+offset_bottom = 528.0
+
+[node name="TermenalProcess" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="TermenalProcess" to="." method="_on_termenal_process_timeout"]
+
+[editable path="LinesContainer"]

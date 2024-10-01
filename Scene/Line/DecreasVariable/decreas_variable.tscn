@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://djw066cinkxnw"]
+
+[ext_resource type="PackedScene" uid="uid://10vqq2raaua0" path="res://Scene/Line/line.tscn" id="1_1iast"]
+[ext_resource type="Script" path="res://Script/Line/DecreasVariable/decreas_variable.gd" id="2_303aw"]
+[ext_resource type="PackedScene" uid="uid://cl7jmi6lbm14v" path="res://Scene/Command/command.tscn" id="3_6j47o"]
+
+[node name="DecreasVariable" instance=ExtResource("1_1iast")]
+script = ExtResource("2_303aw")
+number = 0
+command = "decreas_variable"
+
+[node name="Command" parent="." index="1" instance=ExtResource("3_6j47o")]
+layout_mode = 0
+offset_top = 0.0
+offset_bottom = 32.0
