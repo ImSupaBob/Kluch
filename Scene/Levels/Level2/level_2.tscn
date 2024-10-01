@@ -6,4 +6,7 @@
 [node name="Level_2" instance=ExtResource("1_yntex")]
 script = ExtResource("2_w80yn")
 
+[node name="TileMap" parent="." index="0"]
+z_index = -355
+
 [editable path="LinesContainer"]

@@ -11,6 +11,10 @@
 [node name="Level1" instance=ExtResource("1_maocd")]
 script = ExtResource("1_5forh")
 
+[node name="LinesContainer" parent="." index="2"]
+offset_left = 160.0
+offset_right = 160.0
+
 [node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("3_3hxcu")]
 layout_mode = 2
 text_line = "creat Adam"
@@ -33,7 +37,11 @@ text_line = "bruh.pepega()"
 layout_mode = 2
 text_line = "win"
 
+[node name="LinesContainer2" parent="." index="3"]
+offset_left = 544.0
+offset_right = 544.0
+
 [node name="Down" parent="." index="4" instance=ExtResource("7_tluc8")]
-position = Vector2(520, 96)
+position = Vector2(952, 72)
 
 [editable path="LinesContainer"]

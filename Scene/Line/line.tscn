@@ -11,4 +11,4 @@ script = ExtResource("1_q0owo")
 
 [node name="Key" parent="." instance=ExtResource("1_jsjuk")]
 visible = false
-position = Vector2(-24, 16)
+position = Vector2(-16, 16)
