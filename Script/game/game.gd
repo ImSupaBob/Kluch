@@ -12,7 +12,8 @@ func _ready():
 	
 	for line in lines:
 		termenal_lines[line.name] = line
-		
+	
+	#if ermenal_lines.get("Line1_1") != null:
 	termenal_lines.get("Line1_1").show_key()
 
 func _on_termenal_process_timeout():
@@ -42,14 +43,13 @@ func _on_termenal_process_timeout():
 			if is_pass_if:
 				jump_next_line()
 			elif !is_pass_if:
-				curent_line = "1_1"
+				break_terminal()
 		"logic_cell":
 			var logic_cell : LogicCell = line.get_node("LogicCell")
-			var component_command : String = logic_cell.get_component_command()
-			curent_line = _sum_lines(curent_line, component_command)
-			print(curent_line)
+			var log_component : LogComponent = logic_cell.get_log_component()
+			curent_line = log_component.run_command(curent_line)
 		"break":
-			curent_line = "1_1"
+			break_terminal()
 		"win":
 			_change_scene()
 			return
@@ -57,7 +57,7 @@ func _on_termenal_process_timeout():
 	line.hide_key()
 	line = termenal_lines.get("Line" + curent_line)
 	if line == null:
-		curent_line = "1_1"
+		break_terminal()
 		return
 	line.show_key()
 
@@ -65,10 +65,7 @@ func _change_scene():
 	pass
 
 func jump_next_line():
-	curent_line = _sum_lines(curent_line, "0_1")
+	curent_line = Global.sum_lines(curent_line, "0_1")
 
-func _sum_lines(first_line : String, second_line : String) -> String:
-	var first_number = first_line.split("_")
-	var second_number = second_line.split("_")
-	return str(int(first_number[0]) + int(second_number[0])) +\
-	 "_" + str(int(first_number[-1]) + int(second_number[-1]))
+func break_terminal():
+	curent_line = "1_1"

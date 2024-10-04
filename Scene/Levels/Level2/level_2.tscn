@@ -1,12 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://caku7tmexwhu5"]
+[gd_scene load_steps=7 format=3 uid="uid://caku7tmexwhu5"]
 
 [ext_resource type="PackedScene" uid="uid://b32unvkphkkun" path="res://Scene/Levels/BaseLevelScene/base_level_scene.tscn" id="1_yntex"]
 [ext_resource type="Script" path="res://Script/Levels/Level2/level_2.gd" id="2_w80yn"]
+[ext_resource type="PackedScene" uid="uid://4sj6ks3ak7fq" path="res://Scene/Line/InitVariable/init_variable.tscn" id="3_u5v3b"]
+[ext_resource type="PackedScene" uid="uid://dfd81mhgyocle" path="res://Scene/Line/Pass/pass.tscn" id="4_mis7q"]
+[ext_resource type="PackedScene" uid="uid://dodfqqfh8ah0j" path="res://Scene/Line/IncreasVariable/increas_variable.tscn" id="5_k123c"]
+[ext_resource type="PackedScene" uid="uid://b7rb45f21jpo7" path="res://Scene/Line/IfStatment/if_statment.tscn" id="6_a6sdp"]
 
 [node name="Level_2" instance=ExtResource("1_yntex")]
 script = ExtResource("2_w80yn")
 
 [node name="TileMap" parent="." index="0"]
 z_index = -355
+
+[node name="InitVariable" parent="LinesContainer" index="0" instance=ExtResource("3_u5v3b")]
+layout_mode = 2
+
+[node name="Pass" parent="LinesContainer" index="1" instance=ExtResource("4_mis7q")]
+layout_mode = 2
+
+[node name="IncreasVariable" parent="LinesContainer" index="2" instance=ExtResource("5_k123c")]
+layout_mode = 2
+
+[node name="IfStatment" parent="LinesContainer" index="3" instance=ExtResource("6_a6sdp")]
+layout_mode = 2
 
 [editable path="LinesContainer"]

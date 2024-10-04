@@ -1,9 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6r81l7l4h04v"]
+[gd_scene load_steps=3 format=3 uid="uid://b6r81l7l4h04v"]
 
 [ext_resource type="PackedScene" uid="uid://b22udbmln3jy0" path="res://Scene/LogComponent/log_component.tscn" id="1_rpmgj"]
+[ext_resource type="Script" path="res://Script/LogComponent/Components/down.gd" id="2_418jj"]
 
 [node name="Down" instance=ExtResource("1_rpmgj")]
-component_command = "0_1"
+script = ExtResource("2_418jj")
 
 [node name="Sprite2D" parent="." index="0"]
 rotation = 3.14159

@@ -4,9 +4,6 @@ extends StaticBody2D
 var selected : bool = false
 var creat_point : Vector2 
 var rest_point : Vector2
-@export_enum(
-	"0_1", "1_0","-1_0",
-	) var component_command : String
 
 @onready var detecter_area = $Area2D
 
@@ -45,3 +42,5 @@ func _on_drop_down():
 	else:
 		rest_point = global_position
 
+func run_command(curent_line : String):
+	pass
