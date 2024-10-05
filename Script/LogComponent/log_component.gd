@@ -4,6 +4,8 @@ extends StaticBody2D
 var selected : bool = false
 var creat_point : Vector2 
 var rest_point : Vector2
+var line : String = "1_1"
+var is_out_cell : bool = true
 
 @onready var detecter_area = $Area2D
 

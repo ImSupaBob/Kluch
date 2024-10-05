@@ -2,11 +2,16 @@ class_name LogicCell
 extends StaticBody2D
 
 var log_component : LogComponent
+var logic_cell_line : String
 
 signal log_component_inserted
 
 func  _ready():
 	log_component_inserted.connect(_on_log_component_inserted)
+	
+	logic_cell_line = get_parent().name.replace("Line", "")
+	
+	print(logic_cell_line)
 
 func is_empty() -> bool:
 	if log_component == null:
@@ -26,9 +31,13 @@ func delet_log_component() -> void:
 
 func _on_log_component_inserted() -> void:
 	log_component.pick_up.connect(_on_log_component_pick_up)
+	log_component.is_out_cell = false
+	log_component.line = logic_cell_line
 
 func _on_log_component_pick_up() -> void:
 	log_component.pick_up.disconnect(_on_log_component_pick_up)
+	log_component.is_out_cell = true
+	log_component.line = "1_1"
 	delet_log_component()
 
 func get_component_command() -> String:
