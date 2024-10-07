@@ -1,10 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://spthkvi1edf"]
+[gd_scene load_steps=4 format=3 uid="uid://spthkvi1edf"]
 
 [ext_resource type="PackedScene" uid="uid://b22udbmln3jy0" path="res://Scene/LogComponent/log_component.tscn" id="1_sxpsd"]
 [ext_resource type="Script" path="res://Script/LogComponent/Components/left.gd" id="2_bn25t"]
+[ext_resource type="Texture2D" uid="uid://yco60fem8xx7" path="res://Assets/LogComponent/arrow2.png" id="3_txst6"]
 
 [node name="Left" instance=ExtResource("1_sxpsd")]
 script = ExtResource("2_bn25t")
 
 [node name="Sprite2D" parent="." index="0"]
-rotation = 4.71239
+texture = ExtResource("3_txst6")

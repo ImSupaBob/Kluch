@@ -13,6 +13,7 @@ collision_layer = 2
 script = ExtResource("1_n633i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.419608, 0.419608, 0.419608, 1)
 scale = Vector2(32, 32)
 texture = SubResource("CanvasTexture_ecry0")
 

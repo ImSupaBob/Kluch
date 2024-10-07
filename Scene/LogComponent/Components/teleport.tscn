@@ -1,10 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://beip0c3kweiq3"]
+[gd_scene load_steps=4 format=3 uid="uid://beip0c3kweiq3"]
 
 [ext_resource type="PackedScene" uid="uid://b22udbmln3jy0" path="res://Scene/LogComponent/log_component.tscn" id="1_213xm"]
 [ext_resource type="Script" path="res://Script/LogComponent/Components/teleport.gd" id="2_dbp4w"]
+[ext_resource type="Texture2D" uid="uid://b7d1qa22ko32m" path="res://Assets/LogComponent/teleport.png" id="3_kquq5"]
 
 [node name="Teleport" instance=ExtResource("1_213xm")]
 script = ExtResource("2_dbp4w")
 
 [node name="Sprite2D" parent="." index="0"]
-modulate = Color(0.431373, 0.0156863, 0.439216, 1)
+texture = ExtResource("3_kquq5")

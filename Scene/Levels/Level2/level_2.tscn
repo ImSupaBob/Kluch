@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://caku7tmexwhu5"]
+[gd_scene load_steps=10 format=3 uid="uid://caku7tmexwhu5"]
 
 [ext_resource type="PackedScene" uid="uid://b32unvkphkkun" path="res://Scene/Levels/BaseLevelScene/base_level_scene.tscn" id="1_yntex"]
 [ext_resource type="Script" path="res://Script/Levels/Level2/level_2.gd" id="2_w80yn"]
-[ext_resource type="PackedScene" uid="uid://4sj6ks3ak7fq" path="res://Scene/Line/InitVariable/init_variable.tscn" id="3_u5v3b"]
+[ext_resource type="PackedScene" uid="uid://10vqq2raaua0" path="res://Scene/Line/line.tscn" id="4_erpfs"]
 [ext_resource type="PackedScene" uid="uid://dfd81mhgyocle" path="res://Scene/Line/Pass/pass.tscn" id="4_mis7q"]
-[ext_resource type="PackedScene" uid="uid://dodfqqfh8ah0j" path="res://Scene/Line/IncreasVariable/increas_variable.tscn" id="5_k123c"]
-[ext_resource type="PackedScene" uid="uid://b7rb45f21jpo7" path="res://Scene/Line/IfStatment/if_statment.tscn" id="6_a6sdp"]
+[ext_resource type="PackedScene" uid="uid://c3o5ck6aeargh" path="res://Scene/Line/Break/break.tscn" id="5_42hq0"]
+[ext_resource type="PackedScene" uid="uid://d1iguuuk2pkjs" path="res://Scene/LogicCell/logic_cell.tscn" id="5_ywgko"]
+[ext_resource type="PackedScene" uid="uid://dyvw3k8vqqa5f" path="res://Scene/Line/Win/win.tscn" id="6_pfejl"]
+[ext_resource type="PackedScene" uid="uid://b6r81l7l4h04v" path="res://Scene/LogComponent/Components/down.tscn" id="8_cokri"]
+[ext_resource type="PackedScene" uid="uid://bmhx62iuqne53" path="res://Scene/LogComponent/Components/rigth.tscn" id="9_5d5xf"]
 
 [node name="Level_2" instance=ExtResource("1_yntex")]
 script = ExtResource("2_w80yn")
@@ -13,16 +16,46 @@ script = ExtResource("2_w80yn")
 [node name="TileMap" parent="." index="0"]
 z_index = -355
 
-[node name="InitVariable" parent="LinesContainer" index="0" instance=ExtResource("3_u5v3b")]
+[node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("4_mis7q")]
 layout_mode = 2
+text_line = "Init Laser"
 
-[node name="Pass" parent="LinesContainer" index="1" instance=ExtResource("4_mis7q")]
+[node name="Line1_2" parent="LinesContainer" index="1" instance=ExtResource("4_erpfs")]
 layout_mode = 2
+command = "logic_cell"
 
-[node name="IncreasVariable" parent="LinesContainer" index="2" instance=ExtResource("5_k123c")]
-layout_mode = 2
+[node name="LogicCell" parent="LinesContainer/Line1_2" index="1" instance=ExtResource("5_ywgko")]
 
-[node name="IfStatment" parent="LinesContainer" index="3" instance=ExtResource("6_a6sdp")]
+[node name="Line1_3" parent="LinesContainer" index="2" instance=ExtResource("5_42hq0")]
 layout_mode = 2
+text_line = "break"
+
+[node name="Line2_1" parent="LinesContainer2" index="0" instance=ExtResource("4_mis7q")]
+layout_mode = 2
+text_line = "open_toilet_on_4_zone"
+
+[node name="Line2_2" parent="LinesContainer2" index="1" instance=ExtResource("4_mis7q")]
+layout_mode = 2
+text_line = "Some_fink_funny"
+
+[node name="Line2_3" parent="LinesContainer2" index="2" instance=ExtResource("4_erpfs")]
+layout_mode = 2
+command = "logic_cell"
+
+[node name="LogicCell" parent="LinesContainer2/Line2_3" index="1" instance=ExtResource("5_ywgko")]
+
+[node name="Line2_4" parent="LinesContainer2" index="3" instance=ExtResource("4_mis7q")]
+layout_mode = 2
+text_line = "Some_fink_funny"
+
+[node name="Line2_5" parent="LinesContainer2" index="4" instance=ExtResource("6_pfejl")]
+layout_mode = 2
+text_line = "shoot_in_target()"
+
+[node name="Down" parent="." index="5" instance=ExtResource("8_cokri")]
+position = Vector2(936, 88)
+
+[node name="Rigth" parent="." index="6" instance=ExtResource("9_5d5xf")]
+position = Vector2(944, 144)
 
 [editable path="LinesContainer"]

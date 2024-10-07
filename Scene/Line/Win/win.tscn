@@ -14,4 +14,4 @@ offset_top = 0.0
 offset_bottom = 32.0
 
 [node name="Pedestal" type="Sprite2D" parent="." index="2"]
-position = Vector2(-24, 16)
+position = Vector2(-16, 16)

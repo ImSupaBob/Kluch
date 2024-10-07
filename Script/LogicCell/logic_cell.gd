@@ -2,16 +2,18 @@ class_name LogicCell
 extends StaticBody2D
 
 var log_component : LogComponent
+@export var log_component_on_start : LogComponent
 var logic_cell_line : String
 
 signal log_component_inserted
 
 func  _ready():
 	log_component_inserted.connect(_on_log_component_inserted)
-	
 	logic_cell_line = get_parent().name.replace("Line", "")
 	
-	print(logic_cell_line)
+	if log_component_on_start != null: # 
+		set_log_component(log_component_on_start)
+		log_component_on_start.rest_point = global_position
 
 func is_empty() -> bool:
 	if log_component == null:
