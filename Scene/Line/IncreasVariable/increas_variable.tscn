@@ -10,6 +10,7 @@ number = 0
 command = "increas_variable"
 
 [node name="Command" parent="." index="1" instance=ExtResource("3_xv3fb")]
+modulate = Color(0, 1, 0, 1)
 layout_mode = 0
 offset_top = 0.0
 offset_bottom = 32.0

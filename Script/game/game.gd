@@ -51,7 +51,7 @@ func _on_termenal_process_timeout():
 		"break":
 			break_terminal()
 		"win":
-			_change_scene()
+			_win()
 			return
 	
 	line.hide_key()
@@ -63,6 +63,10 @@ func _on_termenal_process_timeout():
 
 func _change_scene():
 	pass
+
+func _win():
+	await get_tree().create_timer(5).timeout
+	_change_scene()
 
 func jump_next_line():
 	curent_line = Global.sum_lines(curent_line, "0_1")

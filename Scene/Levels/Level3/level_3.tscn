@@ -45,10 +45,8 @@ log_component_on_start = NodePath("../../../Break")
 [node name="Line1_7" parent="LinesContainer" index="6" instance=ExtResource("2_p0cu4")]
 layout_mode = 2
 
-[node name="Line1_8" parent="LinesContainer" index="7" instance=ExtResource("2_p0cu4")]
+[node name="Line1_8" parent="LinesContainer" index="7" instance=ExtResource("6_ljchi")]
 layout_mode = 2
-text_line = "win"
-command = "win"
 
 [node name="Line2_1" parent="LinesContainer2" index="0" instance=ExtResource("2_p0cu4")]
 layout_mode = 2
@@ -67,11 +65,9 @@ log_component_on_start = NodePath("../../../Break2")
 
 [node name="Line2_4" parent="LinesContainer2" index="3" instance=ExtResource("2_p0cu4")]
 layout_mode = 2
-text_line = "Some_fink_funny"
 
-[node name="Line2_5" parent="LinesContainer2" index="4" instance=ExtResource("6_ljchi")]
+[node name="Line2_5" parent="LinesContainer2" index="4" instance=ExtResource("2_p0cu4")]
 layout_mode = 2
-command = "pass"
 
 [node name="Line2_6" parent="LinesContainer2" index="5" instance=ExtResource("3_c5yly")]
 layout_mode = 2
@@ -79,13 +75,11 @@ command = "logic_cell"
 
 [node name="LogicCell" parent="LinesContainer2/Line2_6" index="1" instance=ExtResource("4_l0tba")]
 
-[node name="Line2_7" parent="LinesContainer2" index="6" instance=ExtResource("6_ljchi")]
+[node name="Line2_7" parent="LinesContainer2" index="6" instance=ExtResource("2_p0cu4")]
 layout_mode = 2
-command = "pass"
 
-[node name="Line2_8" parent="LinesContainer2" index="7" instance=ExtResource("6_ljchi")]
+[node name="Line2_8" parent="LinesContainer2" index="7" instance=ExtResource("2_p0cu4")]
 layout_mode = 2
-command = "pass"
 
 [node name="Break" parent="." index="5" instance=ExtResource("7_b5mlw")]
 position = Vector2(112, 240)
