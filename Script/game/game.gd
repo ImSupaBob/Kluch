@@ -65,7 +65,7 @@ func _change_scene():
 	pass
 
 func _win():
-	await get_tree().create_timer(5).timeout
+	await get_tree().create_timer(2).timeout
 	_change_scene()
 
 func jump_next_line():

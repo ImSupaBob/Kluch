@@ -11,7 +11,7 @@ comparison_operation = ""
 command = "if_statment"
 
 [node name="Command" parent="." index="1" instance=ExtResource("2_70i2g")]
-modulate = Color(0, 0.0499997, 1, 1)
+modulate = Color(0.795629, 0.324596, 1, 1)
 layout_mode = 0
 offset_top = 0.0
 offset_bottom = 32.0

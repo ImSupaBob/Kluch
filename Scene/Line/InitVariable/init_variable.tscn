@@ -7,6 +7,7 @@
 command = "init_variable"
 
 [node name="Command" parent="." index="1" instance=ExtResource("2_hycbl")]
+modulate = Color(0.83444, 0.401325, 7.70092e-07, 1)
 layout_mode = 0
 offset_top = 0.0
 offset_bottom = 32.0

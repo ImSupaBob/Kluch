@@ -4,10 +4,14 @@ extends Node
 static var ref: Manager
 
 func _init():
-	if not ref: 
+	if not ref:
+		print(ref," 1")
 		ref = self
-	else: 
+		print(ref," 2")
+	else:
+		print(ref," 3")
 		queue_free()
+		print(ref," 4")
 
 var _resource: int = 0
 

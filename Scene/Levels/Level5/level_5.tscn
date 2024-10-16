@@ -1,0 +1,80 @@
+[gd_scene load_steps=14 format=3 uid="uid://c4grxnw52ob4j"]
+
+[ext_resource type="PackedScene" uid="uid://b32unvkphkkun" path="res://Scene/Levels/BaseLevelScene/base_level_scene.tscn" id="1_hbf2a"]
+[ext_resource type="Script" path="res://Script/Levels/Level5/level_5.gd" id="2_a5quh"]
+[ext_resource type="PackedScene" uid="uid://c24eo5ia04if7" path="res://Scene/Managers/manager_a.tscn" id="3_nfrya"]
+[ext_resource type="PackedScene" uid="uid://4sj6ks3ak7fq" path="res://Scene/Line/InitVariable/init_variable.tscn" id="4_t4g5t"]
+[ext_resource type="PackedScene" uid="uid://dfd81mhgyocle" path="res://Scene/Line/Pass/pass.tscn" id="5_luw6y"]
+[ext_resource type="PackedScene" uid="uid://dodfqqfh8ah0j" path="res://Scene/Line/IncreasVariable/increas_variable.tscn" id="6_fpg8a"]
+[ext_resource type="PackedScene" uid="uid://dmjdjk2v8udr4" path="res://Scene/Line/Cell/cell.tscn" id="7_o6su8"]
+[ext_resource type="PackedScene" uid="uid://djw066cinkxnw" path="res://Scene/Line/DecreasVariable/decreas_variable.tscn" id="8_b4tbm"]
+[ext_resource type="PackedScene" uid="uid://b7rb45f21jpo7" path="res://Scene/Line/IfStatment/if_statment.tscn" id="9_8emll"]
+[ext_resource type="PackedScene" uid="uid://dyvw3k8vqqa5f" path="res://Scene/Line/Win/win.tscn" id="10_2t2na"]
+[ext_resource type="PackedScene" uid="uid://cmjoqpyrjqikq" path="res://Scene/LogComponent/Components/break.tscn" id="11_hx5jo"]
+[ext_resource type="PackedScene" uid="uid://b6r81l7l4h04v" path="res://Scene/LogComponent/Components/down.tscn" id="12_odk0h"]
+[ext_resource type="PackedScene" uid="uid://bp6i75b3pjeen" path="res://Scene/UI/Counter/counter.tscn" id="13_kswyj"]
+
+[node name="Level5" instance=ExtResource("1_hbf2a")]
+script = ExtResource("2_a5quh")
+
+[node name="ManagerA" parent="Managers" index="0" instance=ExtResource("3_nfrya")]
+
+[node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("4_t4g5t")]
+layout_mode = 2
+text_line = "var manager_A"
+
+[node name="Line1_2" parent="LinesContainer" index="1" instance=ExtResource("5_luw6y")]
+layout_mode = 2
+
+[node name="Line1_3" parent="LinesContainer" index="2" node_paths=PackedStringArray("manager") instance=ExtResource("6_fpg8a")]
+layout_mode = 2
+number = 10
+manager = NodePath("../../Managers/ManagerA")
+text_line = "managerA += 10"
+
+[node name="Line1_4" parent="LinesContainer" index="3" instance=ExtResource("7_o6su8")]
+layout_mode = 2
+
+[node name="LogicCell" parent="LinesContainer/Line1_4" index="2" node_paths=PackedStringArray("log_component_on_start")]
+log_component_on_start = NodePath("../../../Down2")
+
+[node name="Line1_5" parent="LinesContainer" index="4" instance=ExtResource("5_luw6y")]
+layout_mode = 2
+
+[node name="Line1_6" parent="LinesContainer" index="5" node_paths=PackedStringArray("manager") instance=ExtResource("8_b4tbm")]
+layout_mode = 2
+number = -100
+manager = NodePath("../../Managers/ManagerA")
+text_line = "managerA -= 100"
+
+[node name="Line1_7" parent="LinesContainer" index="6" instance=ExtResource("7_o6su8")]
+layout_mode = 2
+
+[node name="Line1_8" parent="LinesContainer" index="7" node_paths=PackedStringArray("manager") instance=ExtResource("9_8emll")]
+layout_mode = 2
+manager = NodePath("../../Managers/ManagerA")
+comparison_operation = ">="
+text_line = "If Manager_A >= 100"
+
+[node name="Line1_9" parent="LinesContainer" index="8" instance=ExtResource("10_2t2na")]
+layout_mode = 2
+
+[node name="Break" parent="." index="5" instance=ExtResource("11_hx5jo")]
+position = Vector2(433, 267)
+
+[node name="Down" parent="." index="6" instance=ExtResource("12_odk0h")]
+position = Vector2(433, 160)
+
+[node name="Down2" parent="." index="7" instance=ExtResource("12_odk0h")]
+position = Vector2(112, 174)
+
+[node name="Counter" parent="." index="9" node_paths=PackedStringArray("_manager") instance=ExtResource("13_kswyj")]
+offset_left = 768.0
+offset_top = 448.0
+offset_right = 808.0
+offset_bottom = 471.0
+recource_name = "ManagerA"
+_manager = NodePath("../Managers/ManagerA")
+
+[editable path="LinesContainer"]
+[editable path="LinesContainer/Line1_4"]
