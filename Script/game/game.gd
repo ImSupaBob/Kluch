@@ -5,6 +5,9 @@ var termenal_lines : Dictionary = {}
 var logic_cells : Array = []
 var curent_line : String
 @export var start_line : String = "1_1"
+@onready var step_audio: AudioStreamPlayer2D = $Step
+@onready var key_audio: AudioStreamPlayer2D = $Key
+@onready var termenal_process: Timer = $TermenalProcess
 
 func _ready():
 	curent_line = start_line
@@ -50,6 +53,7 @@ func _on_termenal_process_timeout():
 			var logic_cell : LogicCell = line.get_node("LogicCell")
 			var log_component : LogComponent = logic_cell.get_log_component()
 			curent_line = log_component.run_command(curent_line)
+			step_audio.play()
 		"break":
 			print(start_line, curent_line)
 			break_terminal()
@@ -68,13 +72,15 @@ func _change_scene():
 	pass
 
 func _win():
+	termenal_process.stop()
+	key_audio.play()
 	await get_tree().create_timer(2).timeout
 	_change_scene()
 
 func jump_next_line():
+	step_audio.play()
 	curent_line = Global.sum_lines(curent_line, "0_1")
 
 func break_terminal():
-	print(start_line, curent_line)
+	step_audio.play()
 	curent_line = start_line
-	print(start_line, curent_line)

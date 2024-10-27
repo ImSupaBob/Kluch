@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=4 uid="uid://b32unvkphkkun"]
+[gd_scene load_steps=11 format=4 uid="uid://b32unvkphkkun"]
 
 [ext_resource type="Script" path="res://Script/game/game.gd" id="1_kyshq"]
 [ext_resource type="PackedScene" uid="uid://bvu87bccq11ir" path="res://Scene/LinesContainer/lines_container.tscn" id="2_5gdyd"]
 [ext_resource type="Texture2D" uid="uid://dw13ab47ehef1" path="res://Assets/Background/Patern0110.png" id="3_glp4o"]
 [ext_resource type="Texture2D" uid="uid://bwqd1bjlr401u" path="res://Assets/Background/PaternGrey.png" id="4_s54t5"]
 [ext_resource type="PackedScene" uid="uid://bpbqgh6o6rjv3" path="res://Scene/UI/Buttons/RestartButton/restart_button.tscn" id="5_4xb1n"]
+[ext_resource type="AudioStream" uid="uid://dvlkuyx1gm8o2" path="res://Assets/Sound/powerUp.wav" id="6_0hjmj"]
+[ext_resource type="AudioStream" uid="uid://bd46s77fxnen1" path="res://Sound/KeySound/pickupCoin.wav" id="7_4xd6e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j55bd"]
 texture = ExtResource("3_glp4o")
@@ -77,6 +79,12 @@ offset_left = 768.0
 offset_top = 592.0
 offset_right = 896.0
 offset_bottom = 624.0
+
+[node name="Step" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_0hjmj")
+
+[node name="Key" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_4xd6e")
 
 [connection signal="timeout" from="TermenalProcess" to="." method="_on_termenal_process_timeout"]
 
