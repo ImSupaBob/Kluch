@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://Script/LogComponent/log_component.gd" id="1_fgoil"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xn5t5"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_55djv"]
 size = Vector2(32, 32)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_55djv"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xn5t5"]
 size = Vector2(32, 32)
 
 [node name="LogComponent" type="StaticBody2D"]
@@ -14,17 +14,17 @@ collision_mask = 0
 input_pickable = true
 script = ExtResource("1_fgoil")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_xn5t5")
-debug_color = Color(0.976471, 0.117647, 0.270588, 0.419608)
-
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_55djv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xn5t5")
+debug_color = Color(0.976471, 0.117647, 0.270588, 0.419608)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]

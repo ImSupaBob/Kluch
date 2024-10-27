@@ -2,11 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://b22udbmln3jy0" path="res://Scene/LogComponent/log_component.tscn" id="1_jine4"]
 [ext_resource type="Script" path="res://Script/LogComponent/Components/break.gd" id="2_1q6bo"]
-[ext_resource type="Texture2D" uid="uid://51dol2hkiqfc" path="res://Assets/LogComponent/arrow1.png" id="3_srd03"]
+[ext_resource type="Texture2D" uid="uid://rf14aore03q2" path="res://Assets/LogComponent/break.png" id="3_b01t4"]
 
 [node name="Break" instance=ExtResource("1_jine4")]
 script = ExtResource("2_1q6bo")
 
-[node name="Sprite2D" parent="." index="0"]
-modulate = Color(0.831373, 0.0313726, 0, 1)
-texture = ExtResource("3_srd03")
+[node name="Sprite2D" parent="." index="2"]
+texture = ExtResource("3_b01t4")

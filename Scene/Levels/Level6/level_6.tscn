@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://br5vh22sec0r7"]
+[gd_scene load_steps=10 format=3 uid="uid://br5vh22sec0r7"]
 
 [ext_resource type="PackedScene" uid="uid://b32unvkphkkun" path="res://Scene/Levels/BaseLevelScene/base_level_scene.tscn" id="1_a1s1u"]
+[ext_resource type="Script" path="res://Script/Levels/Level6/level_6.gd" id="2_k46yu"]
 [ext_resource type="PackedScene" uid="uid://dfd81mhgyocle" path="res://Scene/Line/Pass/pass.tscn" id="2_xjmb8"]
 [ext_resource type="PackedScene" uid="uid://dmjdjk2v8udr4" path="res://Scene/Line/Cell/cell.tscn" id="3_m0ux7"]
 [ext_resource type="PackedScene" uid="uid://c3o5ck6aeargh" path="res://Scene/Line/Break/break.tscn" id="4_g0spk"]
@@ -9,7 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://spthkvi1edf" path="res://Scene/LogComponent/Components/left.tscn" id="7_xj3yn"]
 [ext_resource type="PackedScene" uid="uid://b6r81l7l4h04v" path="res://Scene/LogComponent/Components/down.tscn" id="8_3jked"]
 
-[node name="BaseLevelScene" instance=ExtResource("1_a1s1u")]
+[node name="Level6" instance=ExtResource("1_a1s1u")]
+script = ExtResource("2_k46yu")
 
 [node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("2_xjmb8")]
 layout_mode = 2
