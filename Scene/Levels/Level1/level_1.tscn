@@ -11,6 +11,9 @@
 [node name="Level1" instance=ExtResource("1_maocd")]
 script = ExtResource("1_5forh")
 
+[node name="TileMap" parent="." index="0"]
+layer_1/name = "Layer3"
+
 [node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("3_3hxcu")]
 layout_mode = 2
 

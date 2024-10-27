@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=3 uid="uid://br5vh22sec0r7"]
+
+[ext_resource type="PackedScene" uid="uid://b32unvkphkkun" path="res://Scene/Levels/BaseLevelScene/base_level_scene.tscn" id="1_a1s1u"]
+[ext_resource type="PackedScene" uid="uid://dfd81mhgyocle" path="res://Scene/Line/Pass/pass.tscn" id="2_xjmb8"]
+[ext_resource type="PackedScene" uid="uid://dmjdjk2v8udr4" path="res://Scene/Line/Cell/cell.tscn" id="3_m0ux7"]
+[ext_resource type="PackedScene" uid="uid://c3o5ck6aeargh" path="res://Scene/Line/Break/break.tscn" id="4_g0spk"]
+[ext_resource type="PackedScene" uid="uid://dyvw3k8vqqa5f" path="res://Scene/Line/Win/win.tscn" id="5_jpqr4"]
+[ext_resource type="PackedScene" uid="uid://beip0c3kweiq3" path="res://Scene/LogComponent/Components/teleport.tscn" id="6_q2p7q"]
+[ext_resource type="PackedScene" uid="uid://spthkvi1edf" path="res://Scene/LogComponent/Components/left.tscn" id="7_xj3yn"]
+[ext_resource type="PackedScene" uid="uid://b6r81l7l4h04v" path="res://Scene/LogComponent/Components/down.tscn" id="8_3jked"]
+
+[node name="BaseLevelScene" instance=ExtResource("1_a1s1u")]
+
+[node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line1_2" parent="LinesContainer" index="1" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line1_3" parent="LinesContainer" index="2" instance=ExtResource("3_m0ux7")]
+layout_mode = 2
+
+[node name="Line1_4" parent="LinesContainer" index="3" instance=ExtResource("4_g0spk")]
+layout_mode = 2
+
+[node name="Line1_5" parent="LinesContainer" index="4" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line1_6" parent="LinesContainer" index="5" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line1_7" parent="LinesContainer" index="6" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line1_8" parent="LinesContainer" index="7" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line1_9" parent="LinesContainer" index="8" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line1_10" parent="LinesContainer" index="9" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line1_11" parent="LinesContainer" index="10" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line1_12" parent="LinesContainer" index="11" instance=ExtResource("5_jpqr4")]
+layout_mode = 2
+
+[node name="Line2_1" parent="LinesContainer2" index="0" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line2_2" parent="LinesContainer2" index="1" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line2_3" parent="LinesContainer2" index="2" instance=ExtResource("3_m0ux7")]
+layout_mode = 2
+
+[node name="Line2_4" parent="LinesContainer2" index="3" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line2_5" parent="LinesContainer2" index="4" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line2_6" parent="LinesContainer2" index="5" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line2_7" parent="LinesContainer2" index="6" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line2_8" parent="LinesContainer2" index="7" instance=ExtResource("3_m0ux7")]
+layout_mode = 2
+
+[node name="Line2_9" parent="LinesContainer2" index="8" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line2_10" parent="LinesContainer2" index="9" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line2_11" parent="LinesContainer2" index="10" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Line2_12" parent="LinesContainer2" index="11" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+
+[node name="Teleport" parent="." index="6" node_paths=PackedStringArray("teleport_exit") instance=ExtResource("6_q2p7q")]
+position = Vector2(736, 112)
+teleport_exit = NodePath("../Teleport2")
+
+[node name="Teleport2" parent="." index="7" node_paths=PackedStringArray("teleport_exit") instance=ExtResource("6_q2p7q")]
+position = Vector2(736, 176)
+teleport_exit = NodePath("../Teleport")
+
+[node name="Left" parent="." index="8" instance=ExtResource("7_xj3yn")]
+position = Vector2(736, 240)
+
+[node name="Down" parent="." index="9" instance=ExtResource("8_3jked")]
+position = Vector2(736, 304)
+
+[editable path="LinesContainer"]

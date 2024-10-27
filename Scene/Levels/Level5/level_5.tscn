@@ -17,6 +17,9 @@
 [node name="Level5" instance=ExtResource("1_hbf2a")]
 script = ExtResource("2_a5quh")
 
+[node name="TileMap" parent="." index="0"]
+layer_1/name = "Layer3"
+
 [node name="ManagerA" parent="Managers" index="0" instance=ExtResource("3_nfrya")]
 
 [node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("4_t4g5t")]
