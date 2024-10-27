@@ -6,6 +6,7 @@
 
 [node name="Break" instance=ExtResource("1_jine4")]
 script = ExtResource("2_1q6bo")
+start_line = "1_1"
 
 [node name="Sprite2D" parent="." index="2"]
 texture = ExtResource("3_b01t4")

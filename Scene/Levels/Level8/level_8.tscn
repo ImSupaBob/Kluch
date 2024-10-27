@@ -1,0 +1,111 @@
+[gd_scene load_steps=13 format=3 uid="uid://ctr7q4d0h5hjk"]
+
+[ext_resource type="PackedScene" uid="uid://b32unvkphkkun" path="res://Scene/Levels/BaseLevelScene/base_level_scene.tscn" id="1_1hnyq"]
+[ext_resource type="PackedScene" uid="uid://c24eo5ia04if7" path="res://Scene/Managers/manager_a.tscn" id="2_mtpb5"]
+[ext_resource type="PackedScene" uid="uid://4sj6ks3ak7fq" path="res://Scene/Line/InitVariable/init_variable.tscn" id="3_kb1fi"]
+[ext_resource type="PackedScene" uid="uid://dmjdjk2v8udr4" path="res://Scene/Line/Cell/cell.tscn" id="4_mma2h"]
+[ext_resource type="PackedScene" uid="uid://dfd81mhgyocle" path="res://Scene/Line/Pass/pass.tscn" id="5_mwy78"]
+[ext_resource type="PackedScene" uid="uid://dodfqqfh8ah0j" path="res://Scene/Line/IncreasVariable/increas_variable.tscn" id="6_etvxu"]
+[ext_resource type="PackedScene" uid="uid://b7rb45f21jpo7" path="res://Scene/Line/IfStatment/if_statment.tscn" id="7_cw7u8"]
+[ext_resource type="PackedScene" uid="uid://dyvw3k8vqqa5f" path="res://Scene/Line/Win/win.tscn" id="8_kxrqf"]
+[ext_resource type="PackedScene" uid="uid://bp6i75b3pjeen" path="res://Scene/UI/Counter/counter.tscn" id="9_4esoi"]
+[ext_resource type="PackedScene" uid="uid://beip0c3kweiq3" path="res://Scene/LogComponent/Components/teleport.tscn" id="10_ferqs"]
+[ext_resource type="PackedScene" uid="uid://spthkvi1edf" path="res://Scene/LogComponent/Components/left.tscn" id="11_740fl"]
+[ext_resource type="PackedScene" uid="uid://bmhx62iuqne53" path="res://Scene/LogComponent/Components/rigth.tscn" id="12_esvqi"]
+
+[node name="Level8" instance=ExtResource("1_1hnyq")]
+
+[node name="ManagerA" parent="Managers" index="0" instance=ExtResource("2_mtpb5")]
+
+[node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("3_kb1fi")]
+layout_mode = 2
+text_line = "Var number"
+
+[node name="Line1_2" parent="LinesContainer" index="1" instance=ExtResource("4_mma2h")]
+layout_mode = 2
+
+[node name="Line1_3" parent="LinesContainer" index="2" instance=ExtResource("5_mwy78")]
+layout_mode = 2
+text_line = "get_local()"
+
+[node name="Line1_4" parent="LinesContainer" index="3" node_paths=PackedStringArray("manager") instance=ExtResource("6_etvxu")]
+layout_mode = 2
+number = -1
+manager = NodePath("../../Managers/ManagerA")
+text_line = "number --1"
+
+[node name="Line1_5" parent="LinesContainer" index="4" instance=ExtResource("5_mwy78")]
+layout_mode = 2
+text_line = "warning -zeroing"
+
+[node name="Line1_6" parent="LinesContainer" index="5" node_paths=PackedStringArray("manager") instance=ExtResource("6_etvxu")]
+layout_mode = 2
+number = -1
+manager = NodePath("../../Managers/ManagerA")
+text_line = "number --1"
+
+[node name="Line1_7" parent="LinesContainer" index="6" instance=ExtResource("4_mma2h")]
+layout_mode = 2
+
+[node name="Line1_8" parent="LinesContainer" index="7" instance=ExtResource("5_mwy78")]
+layout_mode = 2
+text_line = "NULL"
+
+[node name="Line2_1" parent="LinesContainer2" index="0" instance=ExtResource("5_mwy78")]
+layout_mode = 2
+text_line = "is_run"
+
+[node name="Line2_2" parent="LinesContainer2" index="1" instance=ExtResource("5_mwy78")]
+layout_mode = 2
+text_line = "go_to 4F3A23A4"
+
+[node name="Line2_3" parent="LinesContainer2" index="2" instance=ExtResource("5_mwy78")]
+layout_mode = 2
+text_line = "then"
+
+[node name="Line2_4" parent="LinesContainer2" index="3" instance=ExtResource("4_mma2h")]
+layout_mode = 2
+
+[node name="Line2_5" parent="LinesContainer2" index="4" node_paths=PackedStringArray("manager") instance=ExtResource("6_etvxu")]
+layout_mode = 2
+number = 1
+manager = NodePath("../../Managers/ManagerA")
+text_line = "number ++1"
+
+[node name="Line2_6" parent="LinesContainer2" index="5" instance=ExtResource("5_mwy78")]
+layout_mode = 2
+text_line = "_solushion()"
+
+[node name="Line2_7" parent="LinesContainer2" index="6" node_paths=PackedStringArray("manager") instance=ExtResource("7_cw7u8")]
+layout_mode = 2
+manager = NodePath("../../Managers/ManagerA")
+comparison_operation = "=="
+text_line = "if number == 0"
+
+[node name="Line2_8" parent="LinesContainer2" index="7" instance=ExtResource("8_kxrqf")]
+layout_mode = 2
+text_line = "print(number)"
+
+[node name="Counter" parent="." index="7" node_paths=PackedStringArray("_manager") instance=ExtResource("9_4esoi")]
+offset_left = 736.0
+offset_top = 536.0
+offset_right = 776.0
+offset_bottom = 559.0
+recource_name = "number: "
+_manager = NodePath("../Managers/ManagerA")
+
+[node name="Teleport" parent="." index="8" node_paths=PackedStringArray("teleport_exit") instance=ExtResource("10_ferqs")]
+position = Vector2(736, 112)
+teleport_exit = NodePath("../Teleport2")
+
+[node name="Teleport2" parent="." index="9" node_paths=PackedStringArray("teleport_exit") instance=ExtResource("10_ferqs")]
+position = Vector2(736, 176)
+teleport_exit = NodePath("../Teleport")
+
+[node name="Left" parent="." index="10" instance=ExtResource("11_740fl")]
+position = Vector2(736, 240)
+
+[node name="Rigth" parent="." index="11" instance=ExtResource("12_esvqi")]
+position = Vector2(736, 304)
+
+[editable path="LinesContainer"]

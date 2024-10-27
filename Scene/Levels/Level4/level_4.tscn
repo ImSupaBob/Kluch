@@ -13,36 +13,44 @@ script = ExtResource("2_08sn1")
 
 [node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("4_tl8ya")]
 layout_mode = 2
+text_line = "new coffee_machine"
 
 [node name="Line1_2" parent="LinesContainer" index="1" instance=ExtResource("4_tl8ya")]
 layout_mode = 2
+text_line = "!strcmp(v, \"centaur\")"
 
 [node name="Line1_3" parent="LinesContainer" index="2" instance=ExtResource("3_07bgd")]
 layout_mode = 2
 
 [node name="Line1_4" parent="LinesContainer" index="3" instance=ExtResource("4_tl8ya")]
 layout_mode = 2
+text_line = "skipping 0x%\"PRIX32\""
 
 [node name="Line1_5" parent="LinesContainer" index="4" instance=ExtResource("4_tl8ya")]
 layout_mode = 2
+text_line = "NASM_ASSEMBLE_H"
 
 [node name="Line1_6" parent="LinesContainer" index="5" instance=ExtResource("3_07bgd")]
 layout_mode = 2
 
 [node name="Line1_7" parent="LinesContainer" index="6" instance=ExtResource("4_tl8ya")]
 layout_mode = 2
+text_line = "thep"
 
 [node name="Line1_8" parent="LinesContainer" index="7" instance=ExtResource("4_tl8ya")]
 layout_mode = 2
+text_line = "pass()"
 
 [node name="Line1_9" parent="LinesContainer" index="8" instance=ExtResource("3_07bgd")]
 layout_mode = 2
 
 [node name="Line1_10" parent="LinesContainer" index="9" instance=ExtResource("4_tl8ya")]
 layout_mode = 2
+text_line = "go_to 38AF43DA"
 
 [node name="Line1_11" parent="LinesContainer" index="10" instance=ExtResource("5_exxk2")]
 layout_mode = 2
+text_line = "make_coffee()"
 
 [node name="Break" parent="." index="5" instance=ExtResource("5_a5bef")]
 position = Vector2(434, 89)

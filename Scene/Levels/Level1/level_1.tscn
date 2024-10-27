@@ -16,9 +16,11 @@ layer_1/name = "Layer3"
 
 [node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("3_3hxcu")]
 layout_mode = 2
+text_line = "bool end_prefix"
 
 [node name="Line1_2" parent="LinesContainer" index="1" instance=ExtResource("3_3hxcu")]
 layout_mode = 2
+text_line = "REX_P + 0x0"
 
 [node name="Line1_3" parent="LinesContainer" index="2" instance=ExtResource("4_v0pm2")]
 layout_mode = 2
@@ -28,9 +30,11 @@ command = "logic_cell"
 
 [node name="Line1_4" parent="LinesContainer" index="3" instance=ExtResource("3_3hxcu")]
 layout_mode = 2
+text_line = "-del /f config.h"
 
 [node name="Line1_5" parent="LinesContainer" index="4" instance=ExtResource("6_1hvs6")]
 layout_mode = 2
+text_line = "clone(data)"
 
 [node name="Down" parent="." index="5" instance=ExtResource("7_tluc8")]
 position = Vector2(776, 192)

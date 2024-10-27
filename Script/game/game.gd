@@ -3,9 +3,11 @@ extends Node2D
 
 var termenal_lines : Dictionary = {}
 var logic_cells : Array = []
-var curent_line : String = "1_1"
+var curent_line : String
+@export var start_line : String = "1_1"
 
 func _ready():
+	curent_line = start_line
 	logic_cells = get_tree().get_nodes_in_group("logic_cells")
 	
 	var lines : Array = get_tree().get_nodes_in_group("Lines")
@@ -14,7 +16,7 @@ func _ready():
 		termenal_lines[line.name] = line
 	
 	#if ermenal_lines.get("Line1_1") != null:
-	termenal_lines.get("Line1_1").show_key()
+	termenal_lines.get("Line" + start_line).show_key()
 
 func _on_termenal_process_timeout():
 	#check is logic cell not empty
@@ -49,6 +51,7 @@ func _on_termenal_process_timeout():
 			var log_component : LogComponent = logic_cell.get_log_component()
 			curent_line = log_component.run_command(curent_line)
 		"break":
+			print(start_line, curent_line)
 			break_terminal()
 		"win":
 			_win()
@@ -72,4 +75,6 @@ func jump_next_line():
 	curent_line = Global.sum_lines(curent_line, "0_1")
 
 func break_terminal():
-	curent_line = "1_1"
+	print(start_line, curent_line)
+	curent_line = start_line
+	print(start_line, curent_line)

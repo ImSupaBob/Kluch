@@ -1,110 +1,68 @@
-[gd_scene load_steps=14 format=3 uid="uid://bcpy08nu64bvs"]
+[gd_scene load_steps=9 format=3 uid="uid://bcpy08nu64bvs"]
 
 [ext_resource type="PackedScene" uid="uid://b32unvkphkkun" path="res://Scene/Levels/BaseLevelScene/base_level_scene.tscn" id="1_k78pk"]
 [ext_resource type="PackedScene" uid="uid://dfd81mhgyocle" path="res://Scene/Line/Pass/pass.tscn" id="2_0uiqf"]
-[ext_resource type="PackedScene" uid="uid://c24eo5ia04if7" path="res://Scene/Managers/manager_a.tscn" id="2_i1evu"]
-[ext_resource type="PackedScene" uid="uid://dodij5ndf6vuv" path="res://Scene/Managers/manager_b.tscn" id="3_7iehk"]
 [ext_resource type="PackedScene" uid="uid://beip0c3kweiq3" path="res://Scene/LogComponent/Components/teleport.tscn" id="3_nxe7g"]
 [ext_resource type="PackedScene" uid="uid://b6r81l7l4h04v" path="res://Scene/LogComponent/Components/down.tscn" id="4_1uhpb"]
 [ext_resource type="PackedScene" uid="uid://dmjdjk2v8udr4" path="res://Scene/Line/Cell/cell.tscn" id="4_cgmt4"]
-[ext_resource type="PackedScene" uid="uid://b7rb45f21jpo7" path="res://Scene/Line/IfStatment/if_statment.tscn" id="5_dh6m4"]
-[ext_resource type="PackedScene" uid="uid://cmjoqpyrjqikq" path="res://Scene/LogComponent/Components/break.tscn" id="5_fpw7q"]
+[ext_resource type="PackedScene" uid="uid://c3o5ck6aeargh" path="res://Scene/Line/Break/break.tscn" id="4_q1na3"]
+[ext_resource type="PackedScene" uid="uid://spthkvi1edf" path="res://Scene/LogComponent/Components/left.tscn" id="7_gp8cb"]
 [ext_resource type="PackedScene" uid="uid://dyvw3k8vqqa5f" path="res://Scene/Line/Win/win.tscn" id="7_xvr6v"]
-[ext_resource type="PackedScene" uid="uid://dodfqqfh8ah0j" path="res://Scene/Line/IncreasVariable/increas_variable.tscn" id="8_d6p61"]
-[ext_resource type="PackedScene" uid="uid://djw066cinkxnw" path="res://Scene/Line/DecreasVariable/decreas_variable.tscn" id="9_xp7ud"]
-[ext_resource type="PackedScene" uid="uid://bp6i75b3pjeen" path="res://Scene/UI/Counter/counter.tscn" id="13_6ilxc"]
 
 [node name="Level7" instance=ExtResource("1_k78pk")]
 
-[node name="ManagerA" parent="Managers" index="0" instance=ExtResource("2_i1evu")]
-
-[node name="ManagerB" parent="Managers" index="1" instance=ExtResource("3_7iehk")]
-
 [node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("2_0uiqf")]
 layout_mode = 2
+text_line = "$x86regno"
 
-[node name="Line1_2" parent="LinesContainer" index="1" instance=ExtResource("4_cgmt4")]
+[node name="Line1_2" parent="LinesContainer" index="1" instance=ExtResource("2_0uiqf")]
+layout_mode = 2
+text_line = "NASM_REGS_H"
+
+[node name="Line1_3" parent="LinesContainer" index="2" instance=ExtResource("4_cgmt4")]
 layout_mode = 2
 
-[node name="Line1_3" parent="LinesContainer" index="2" instance=ExtResource("2_0uiqf")]
+[node name="Line1_4" parent="LinesContainer" index="3" instance=ExtResource("4_q1na3")]
 layout_mode = 2
-
-[node name="Line1_4" parent="LinesContainer" index="3" instance=ExtResource("2_0uiqf")]
-layout_mode = 2
+text_line = "break()"
 
 [node name="Line1_5" parent="LinesContainer" index="4" instance=ExtResource("2_0uiqf")]
 layout_mode = 2
+text_line = "REG32NA"
 
 [node name="Line1_6" parent="LinesContainer" index="5" instance=ExtResource("2_0uiqf")]
 layout_mode = 2
+text_line = "0x206F85B3"
 
-[node name="Line1_7" parent="LinesContainer" index="6" instance=ExtResource("2_0uiqf")]
+[node name="Line1_7" parent="LinesContainer" index="6" instance=ExtResource("7_xvr6v")]
 layout_mode = 2
-
-[node name="Line1_8" parent="LinesContainer" index="7" instance=ExtResource("2_0uiqf")]
-layout_mode = 2
-
-[node name="Line1_9" parent="LinesContainer" index="8" instance=ExtResource("4_cgmt4")]
-layout_mode = 2
-
-[node name="Line1_10" parent="LinesContainer" index="9" node_paths=PackedStringArray("manager") instance=ExtResource("5_dh6m4")]
-layout_mode = 2
-comparison_number = -50
-manager = NodePath("../../Managers/ManagerA")
-comparison_operation = "<="
-text_line = "if ManagerA <= -50"
-
-[node name="Line1_11" parent="LinesContainer" index="10" node_paths=PackedStringArray("manager") instance=ExtResource("5_dh6m4")]
-layout_mode = 2
-comparison_number = 50
-manager = NodePath("../../Managers/ManagerB")
-comparison_operation = ">="
-text_line = "if ManagerB >= 50"
-
-[node name="Line1_12" parent="LinesContainer" index="11" instance=ExtResource("7_xvr6v")]
-layout_mode = 2
+text_line = "hello_world()"
 
 [node name="Line2_1" parent="LinesContainer2" index="0" instance=ExtResource("2_0uiqf")]
 layout_mode = 2
+text_line = "NF_TEXT"
 
-[node name="Line2_2" parent="LinesContainer2" index="1" instance=ExtResource("4_cgmt4")]
+[node name="Line2_2" parent="LinesContainer2" index="1" instance=ExtResource("2_0uiqf")]
 layout_mode = 2
+text_line = "HAVE_FCNTL_H"
 
-[node name="Line2_3" parent="LinesContainer2" index="2" node_paths=PackedStringArray("manager") instance=ExtResource("8_d6p61")]
+[node name="Line2_3" parent="LinesContainer2" index="2" instance=ExtResource("4_cgmt4")]
 layout_mode = 2
-number = 10
-manager = NodePath("../../Managers/ManagerB")
 
 [node name="Line2_4" parent="LinesContainer2" index="3" instance=ExtResource("2_0uiqf")]
 layout_mode = 2
+text_line = "S_ISREG"
 
-[node name="Line2_5" parent="LinesContainer2" index="4" instance=ExtResource("4_cgmt4")]
+[node name="Line2_5" parent="LinesContainer2" index="4" instance=ExtResource("2_0uiqf")]
+layout_mode = 2
+text_line = "_SC_PAGESIZE"
+
+[node name="Line2_6" parent="LinesContainer2" index="5" instance=ExtResource("4_cgmt4")]
 layout_mode = 2
 
-[node name="Line2_6" parent="LinesContainer2" index="5" instance=ExtResource("2_0uiqf")]
+[node name="Line2_7" parent="LinesContainer2" index="6" instance=ExtResource("2_0uiqf")]
 layout_mode = 2
-
-[node name="Line2_7" parent="LinesContainer2" index="6" node_paths=PackedStringArray("manager") instance=ExtResource("9_xp7ud")]
-layout_mode = 2
-number = 30
-manager = NodePath("../../Managers/ManagerB")
-
-[node name="Line2_8" parent="LinesContainer2" index="7" node_paths=PackedStringArray("manager") instance=ExtResource("8_d6p61")]
-layout_mode = 2
-number = -30
-manager = NodePath("../../Managers/ManagerA")
-
-[node name="Line2_9" parent="LinesContainer2" index="8" instance=ExtResource("4_cgmt4")]
-layout_mode = 2
-
-[node name="Line2_10" parent="LinesContainer2" index="9" instance=ExtResource("2_0uiqf")]
-layout_mode = 2
-
-[node name="Line2_11" parent="LinesContainer2" index="10" instance=ExtResource("2_0uiqf")]
-layout_mode = 2
-
-[node name="Line2_12" parent="LinesContainer2" index="11" instance=ExtResource("2_0uiqf")]
-layout_mode = 2
+text_line = "NCT_CTRL"
 
 [node name="Teleport" parent="." index="6" node_paths=PackedStringArray("teleport_exit") instance=ExtResource("3_nxe7g")]
 position = Vector2(736, 112)
@@ -114,29 +72,10 @@ teleport_exit = NodePath("../Teleport2")
 position = Vector2(736, 176)
 teleport_exit = NodePath("../Teleport")
 
-[node name="Down" parent="." index="8" instance=ExtResource("4_1uhpb")]
+[node name="Left" parent="." index="8" instance=ExtResource("7_gp8cb")]
 position = Vector2(736, 240)
 
-[node name="Down2" parent="." index="9" instance=ExtResource("4_1uhpb")]
+[node name="Down" parent="." index="9" instance=ExtResource("4_1uhpb")]
 position = Vector2(736, 304)
-
-[node name="Break" parent="." index="10" instance=ExtResource("5_fpw7q")]
-position = Vector2(736, 368)
-
-[node name="Counter" parent="." index="11" node_paths=PackedStringArray("_manager") instance=ExtResource("13_6ilxc")]
-offset_left = 736.0
-offset_top = 504.0
-offset_right = 776.0
-offset_bottom = 527.0
-recource_name = "ManagerA"
-_manager = NodePath("../Managers/ManagerA")
-
-[node name="Counter2" parent="." index="12" node_paths=PackedStringArray("_manager") instance=ExtResource("13_6ilxc")]
-offset_left = 736.0
-offset_top = 552.0
-offset_right = 776.0
-offset_bottom = 575.0
-recource_name = "ManagerB"
-_manager = NodePath("../Managers/ManagerB")
 
 [editable path="LinesContainer"]

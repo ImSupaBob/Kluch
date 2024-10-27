@@ -18,7 +18,7 @@ z_index = -355
 
 [node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("4_mis7q")]
 layout_mode = 2
-text_line = "Init Laser"
+text_line = "op->basereg = R_BP"
 
 [node name="Line1_2" parent="LinesContainer" index="1" instance=ExtResource("4_erpfs")]
 layout_mode = 2
@@ -32,9 +32,11 @@ text_line = "break"
 
 [node name="Line2_1" parent="LinesContainer2" index="0" instance=ExtResource("4_mis7q")]
 layout_mode = 2
+text_line = "opx->type & ~SIZE_MASK"
 
 [node name="Line2_2" parent="LinesContainer2" index="1" instance=ExtResource("4_mis7q")]
 layout_mode = 2
+text_line = "case4(0100)"
 
 [node name="Line2_3" parent="LinesContainer2" index="2" instance=ExtResource("4_erpfs")]
 layout_mode = 2
@@ -44,9 +46,11 @@ command = "logic_cell"
 
 [node name="Line2_4" parent="LinesContainer2" index="3" instance=ExtResource("4_mis7q")]
 layout_mode = 2
+text_line = "REX_EV|REX_V|REX_P"
 
 [node name="Line2_5" parent="LinesContainer2" index="4" instance=ExtResource("6_pfejl")]
 layout_mode = 2
+text_line = "make lab"
 
 [node name="Down" parent="." index="5" instance=ExtResource("8_cokri")]
 position = Vector2(936, 88)

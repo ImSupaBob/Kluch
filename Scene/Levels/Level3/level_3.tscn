@@ -31,9 +31,11 @@ text_line = "break"
 
 [node name="Line1_4" parent="LinesContainer" index="3" instance=ExtResource("2_p0cu4")]
 layout_mode = 2
+text_line = "get_pos()"
 
 [node name="Line1_5" parent="LinesContainer" index="4" instance=ExtResource("2_p0cu4")]
 layout_mode = 2
+text_line = "remove laser"
 
 [node name="Line1_6" parent="LinesContainer" index="5" instance=ExtResource("3_c5yly")]
 layout_mode = 2
@@ -44,17 +46,19 @@ log_component_on_start = NodePath("../../../Break")
 
 [node name="Line1_7" parent="LinesContainer" index="6" instance=ExtResource("2_p0cu4")]
 layout_mode = 2
+text_line = "SEG_RELATIVE"
 
 [node name="Line1_8" parent="LinesContainer" index="7" instance=ExtResource("6_ljchi")]
 layout_mode = 2
+text_line = "new laser"
 
 [node name="Line2_1" parent="LinesContainer2" index="0" instance=ExtResource("2_p0cu4")]
 layout_mode = 2
-text_line = "open_toilet_on_4_zone"
+text_line = "open_toilet_on_4_zone()"
 
 [node name="Line2_2" parent="LinesContainer2" index="1" instance=ExtResource("2_p0cu4")]
 layout_mode = 2
-text_line = "Some_fink_funny"
+text_line = "SEG_64BIT"
 
 [node name="Line2_3" parent="LinesContainer2" index="2" instance=ExtResource("3_c5yly")]
 layout_mode = 2
@@ -65,9 +69,11 @@ log_component_on_start = NodePath("../../../Break2")
 
 [node name="Line2_4" parent="LinesContainer2" index="3" instance=ExtResource("2_p0cu4")]
 layout_mode = 2
+text_line = "uint32_t rex"
 
 [node name="Line2_5" parent="LinesContainer2" index="4" instance=ExtResource("2_p0cu4")]
 layout_mode = 2
+text_line = "X86_MEMORY"
 
 [node name="Line2_6" parent="LinesContainer2" index="5" instance=ExtResource("3_c5yly")]
 layout_mode = 2
@@ -77,9 +83,11 @@ command = "logic_cell"
 
 [node name="Line2_7" parent="LinesContainer2" index="6" instance=ExtResource("2_p0cu4")]
 layout_mode = 2
+text_line = "EXPR_REG_START"
 
 [node name="Line2_8" parent="LinesContainer2" index="7" instance=ExtResource("2_p0cu4")]
 layout_mode = 2
+text_line = "EVEX_P2LL"
 
 [node name="Break" parent="." index="5" instance=ExtResource("7_b5mlw")]
 position = Vector2(112, 240)

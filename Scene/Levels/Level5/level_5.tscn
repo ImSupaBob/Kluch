@@ -24,7 +24,7 @@ layer_1/name = "Layer3"
 
 [node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("4_t4g5t")]
 layout_mode = 2
-text_line = "var manager_A"
+text_line = "var num_A"
 
 [node name="Line1_2" parent="LinesContainer" index="1" instance=ExtResource("5_luw6y")]
 layout_mode = 2
@@ -33,7 +33,7 @@ layout_mode = 2
 layout_mode = 2
 number = 10
 manager = NodePath("../../Managers/ManagerA")
-text_line = "managerA += 10"
+text_line = "num_A += 10"
 
 [node name="Line1_4" parent="LinesContainer" index="3" instance=ExtResource("7_o6su8")]
 layout_mode = 2
@@ -48,7 +48,7 @@ layout_mode = 2
 layout_mode = 2
 number = -100
 manager = NodePath("../../Managers/ManagerA")
-text_line = "managerA -= 100"
+text_line = "num_A -= 100"
 
 [node name="Line1_7" parent="LinesContainer" index="6" instance=ExtResource("7_o6su8")]
 layout_mode = 2
@@ -57,10 +57,11 @@ layout_mode = 2
 layout_mode = 2
 manager = NodePath("../../Managers/ManagerA")
 comparison_operation = ">="
-text_line = "If Manager_A >= 100"
+text_line = "If num_A >= 0"
 
 [node name="Line1_9" parent="LinesContainer" index="8" instance=ExtResource("10_2t2na")]
 layout_mode = 2
+text_line = "print(num_A)"
 
 [node name="Break" parent="." index="5" instance=ExtResource("11_hx5jo")]
 position = Vector2(433, 267)

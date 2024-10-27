@@ -6,97 +6,142 @@
 [ext_resource type="PackedScene" uid="uid://dmjdjk2v8udr4" path="res://Scene/Line/Cell/cell.tscn" id="3_m0ux7"]
 [ext_resource type="PackedScene" uid="uid://c3o5ck6aeargh" path="res://Scene/Line/Break/break.tscn" id="4_g0spk"]
 [ext_resource type="PackedScene" uid="uid://dyvw3k8vqqa5f" path="res://Scene/Line/Win/win.tscn" id="5_jpqr4"]
-[ext_resource type="PackedScene" uid="uid://beip0c3kweiq3" path="res://Scene/LogComponent/Components/teleport.tscn" id="6_q2p7q"]
+[ext_resource type="PackedScene" uid="uid://cmjoqpyrjqikq" path="res://Scene/LogComponent/Components/break.tscn" id="7_k5etm"]
 [ext_resource type="PackedScene" uid="uid://spthkvi1edf" path="res://Scene/LogComponent/Components/left.tscn" id="7_xj3yn"]
-[ext_resource type="PackedScene" uid="uid://b6r81l7l4h04v" path="res://Scene/LogComponent/Components/down.tscn" id="8_3jked"]
+[ext_resource type="PackedScene" uid="uid://bmhx62iuqne53" path="res://Scene/LogComponent/Components/rigth.tscn" id="8_oc6rt"]
 
 [node name="Level6" instance=ExtResource("1_a1s1u")]
 script = ExtResource("2_k46yu")
+start_line = "2_1"
 
 [node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("2_xjmb8")]
 layout_mode = 2
+text_line = "RAA_LAYERMASK"
 
 [node name="Line1_2" parent="LinesContainer" index="1" instance=ExtResource("2_xjmb8")]
 layout_mode = 2
+text_line = "RLIM_INFINITY"
 
-[node name="Line1_3" parent="LinesContainer" index="2" instance=ExtResource("3_m0ux7")]
+[node name="Line1_3" parent="LinesContainer" index="2" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+text_line = "RLIM_SAVED_MAX"
+
+[node name="Line1_4" parent="LinesContainer" index="3" instance=ExtResource("3_m0ux7")]
 layout_mode = 2
 
-[node name="Line1_4" parent="LinesContainer" index="3" instance=ExtResource("4_g0spk")]
-layout_mode = 2
+[node name="LogicCell" parent="LinesContainer/Line1_4" index="2" node_paths=PackedStringArray("log_component_on_start")]
+log_component_on_start = NodePath("../../../Break2")
 
 [node name="Line1_5" parent="LinesContainer" index="4" instance=ExtResource("2_xjmb8")]
 layout_mode = 2
+text_line = "return SIZE_MAX"
 
 [node name="Line1_6" parent="LinesContainer" index="5" instance=ExtResource("2_xjmb8")]
 layout_mode = 2
+text_line = "struct SAA *s"
 
-[node name="Line1_7" parent="LinesContainer" index="6" instance=ExtResource("2_xjmb8")]
+[node name="Line1_7" parent="LinesContainer" index="6" instance=ExtResource("4_g0spk")]
 layout_mode = 2
-
-[node name="Line1_8" parent="LinesContainer" index="7" instance=ExtResource("2_xjmb8")]
-layout_mode = 2
-
-[node name="Line1_9" parent="LinesContainer" index="8" instance=ExtResource("2_xjmb8")]
-layout_mode = 2
-
-[node name="Line1_10" parent="LinesContainer" index="9" instance=ExtResource("2_xjmb8")]
-layout_mode = 2
-
-[node name="Line1_11" parent="LinesContainer" index="10" instance=ExtResource("2_xjmb8")]
-layout_mode = 2
-
-[node name="Line1_12" parent="LinesContainer" index="11" instance=ExtResource("5_jpqr4")]
-layout_mode = 2
+text_line = "break"
 
 [node name="Line2_1" parent="LinesContainer2" index="0" instance=ExtResource("2_xjmb8")]
 layout_mode = 2
+text_line = "strlist_entry *e"
 
-[node name="Line2_2" parent="LinesContainer2" index="1" instance=ExtResource("2_xjmb8")]
+[node name="Line2_2" parent="LinesContainer2" index="1" instance=ExtResource("3_m0ux7")]
 layout_mode = 2
 
-[node name="Line2_3" parent="LinesContainer2" index="2" instance=ExtResource("3_m0ux7")]
+[node name="LogicCell" parent="LinesContainer2/Line2_2" index="2" node_paths=PackedStringArray("log_component_on_start")]
+log_component_on_start = NodePath("../../../Break")
+
+[node name="Line2_3" parent="LinesContainer2" index="2" instance=ExtResource("4_g0spk")]
 layout_mode = 2
+text_line = "break"
 
 [node name="Line2_4" parent="LinesContainer2" index="3" instance=ExtResource("2_xjmb8")]
 layout_mode = 2
+text_line = "saa_wbytes(s, &v, 8)"
 
 [node name="Line2_5" parent="LinesContainer2" index="4" instance=ExtResource("2_xjmb8")]
 layout_mode = 2
+text_line = "void saa_wleb128s"
 
-[node name="Line2_6" parent="LinesContainer2" index="5" instance=ExtResource("2_xjmb8")]
+[node name="Line2_6" parent="LinesContainer2" index="5" instance=ExtResource("3_m0ux7")]
 layout_mode = 2
 
-[node name="Line2_7" parent="LinesContainer2" index="6" instance=ExtResource("2_xjmb8")]
+[node name="LogicCell" parent="LinesContainer2/Line2_6" index="2" node_paths=PackedStringArray("log_component_on_start")]
+log_component_on_start = NodePath("../../../Left")
+
+[node name="Line2_7" parent="LinesContainer2" index="6" instance=ExtResource("4_g0spk")]
+layout_mode = 2
+text_line = "break"
+
+[node name="Line2_8" parent="LinesContainer2" index="7" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+text_line = "cpu_to_le64"
+
+[node name="Line2_9" parent="LinesContainer2" index="8" instance=ExtResource("5_jpqr4")]
+layout_mode = 2
+text_line = "init engine"
+
+[node name="Line3_1" parent="LinesContainer3" index="0" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+text_line = "*list->tailp"
+
+[node name="Line3_2" parent="LinesContainer3" index="1" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+text_line = "HAVE_SYSCONF"
+
+[node name="Line3_3" parent="LinesContainer3" index="2" instance=ExtResource("4_g0spk")]
+layout_mode = 2
+text_line = "break"
+
+[node name="Line3_4" parent="LinesContainer3" index="3" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+text_line = "MAP_FAILED"
+
+[node name="Line3_5" parent="LinesContainer3" index="4" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+text_line = "MAP_SHARED"
+
+[node name="Line3_6" parent="LinesContainer3" index="5" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+text_line = "PROT_READ"
+
+[node name="Line3_7" parent="LinesContainer3" index="6" instance=ExtResource("2_xjmb8")]
+layout_mode = 2
+text_line = "~(uintptr_t)page_mask"
+
+[node name="Line3_8" parent="LinesContainer3" index="7" instance=ExtResource("3_m0ux7")]
 layout_mode = 2
 
-[node name="Line2_8" parent="LinesContainer2" index="7" instance=ExtResource("3_m0ux7")]
+[node name="LogicCell" parent="LinesContainer3/Line3_8" index="2" node_paths=PackedStringArray("log_component_on_start")]
+log_component_on_start = NodePath("../../../Break3")
+
+[node name="Line3_9" parent="LinesContainer3" index="8" instance=ExtResource("2_xjmb8")]
 layout_mode = 2
+text_line = "unlikely(!size)"
 
-[node name="Line2_9" parent="LinesContainer2" index="8" instance=ExtResource("2_xjmb8")]
-layout_mode = 2
+[node name="Break" parent="." index="7" instance=ExtResource("7_k5etm")]
+position = Vector2(432, 112)
+start_line = "2_1"
 
-[node name="Line2_10" parent="LinesContainer2" index="9" instance=ExtResource("2_xjmb8")]
-layout_mode = 2
+[node name="Break2" parent="." index="8" instance=ExtResource("7_k5etm")]
+position = Vector2(112, 176)
+start_line = "2_1"
 
-[node name="Line2_11" parent="LinesContainer2" index="10" instance=ExtResource("2_xjmb8")]
-layout_mode = 2
+[node name="Rigth" parent="." index="9" instance=ExtResource("8_oc6rt")]
+position = Vector2(544, 112)
 
-[node name="Line2_12" parent="LinesContainer2" index="11" instance=ExtResource("2_xjmb8")]
-layout_mode = 2
+[node name="Left" parent="." index="10" instance=ExtResource("7_xj3yn")]
+position = Vector2(432, 240)
 
-[node name="Teleport" parent="." index="6" node_paths=PackedStringArray("teleport_exit") instance=ExtResource("6_q2p7q")]
-position = Vector2(736, 112)
-teleport_exit = NodePath("../Teleport2")
-
-[node name="Teleport2" parent="." index="7" node_paths=PackedStringArray("teleport_exit") instance=ExtResource("6_q2p7q")]
-position = Vector2(736, 176)
-teleport_exit = NodePath("../Teleport")
-
-[node name="Left" parent="." index="8" instance=ExtResource("7_xj3yn")]
-position = Vector2(736, 240)
-
-[node name="Down" parent="." index="9" instance=ExtResource("8_3jked")]
-position = Vector2(736, 304)
+[node name="Break3" parent="." index="11" instance=ExtResource("7_k5etm")]
+position = Vector2(752, 304)
+start_line = "2_1"
 
 [editable path="LinesContainer"]
+[editable path="LinesContainer/Line1_4"]
+[editable path="LinesContainer2/Line2_2"]
+[editable path="LinesContainer2/Line2_6"]
+[editable path="LinesContainer3/Line3_8"]
