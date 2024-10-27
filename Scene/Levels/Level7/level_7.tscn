@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bcpy08nu64bvs"]
+[gd_scene load_steps=10 format=3 uid="uid://bcpy08nu64bvs"]
 
 [ext_resource type="PackedScene" uid="uid://b32unvkphkkun" path="res://Scene/Levels/BaseLevelScene/base_level_scene.tscn" id="1_k78pk"]
 [ext_resource type="PackedScene" uid="uid://dfd81mhgyocle" path="res://Scene/Line/Pass/pass.tscn" id="2_0uiqf"]
+[ext_resource type="Script" path="res://Script/Levels/Level7/level_7.gd" id="2_2r8tg"]
 [ext_resource type="PackedScene" uid="uid://beip0c3kweiq3" path="res://Scene/LogComponent/Components/teleport.tscn" id="3_nxe7g"]
 [ext_resource type="PackedScene" uid="uid://b6r81l7l4h04v" path="res://Scene/LogComponent/Components/down.tscn" id="4_1uhpb"]
 [ext_resource type="PackedScene" uid="uid://dmjdjk2v8udr4" path="res://Scene/Line/Cell/cell.tscn" id="4_cgmt4"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dyvw3k8vqqa5f" path="res://Scene/Line/Win/win.tscn" id="7_xvr6v"]
 
 [node name="Level7" instance=ExtResource("1_k78pk")]
+script = ExtResource("2_2r8tg")
 
 [node name="Line1_1" parent="LinesContainer" index="0" instance=ExtResource("2_0uiqf")]
 layout_mode = 2

@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://cieoxf7a2x4en"]
+[gd_scene load_steps=16 format=3 uid="uid://cieoxf7a2x4en"]
 
 [ext_resource type="PackedScene" uid="uid://b32unvkphkkun" path="res://Scene/Levels/BaseLevelScene/base_level_scene.tscn" id="1_oxbyf"]
+[ext_resource type="Script" path="res://Script/Levels/Level9/level_9.gd" id="2_1akpt"]
 [ext_resource type="PackedScene" uid="uid://c24eo5ia04if7" path="res://Scene/Managers/manager_a.tscn" id="2_jxcey"]
 [ext_resource type="PackedScene" uid="uid://dodij5ndf6vuv" path="res://Scene/Managers/manager_b.tscn" id="3_40hvp"]
 [ext_resource type="PackedScene" uid="uid://4sj6ks3ak7fq" path="res://Scene/Line/InitVariable/init_variable.tscn" id="4_dfadm"]
@@ -16,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bp6i75b3pjeen" path="res://Scene/UI/Counter/counter.tscn" id="13_3qe3h"]
 
 [node name="Level9" instance=ExtResource("1_oxbyf")]
+script = ExtResource("2_1akpt")
 
 [node name="ManagerA" parent="Managers" index="0" instance=ExtResource("2_jxcey")]
 
